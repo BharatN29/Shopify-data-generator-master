@@ -24,13 +24,7 @@ node entry.js --generate products --count 100
 node entry.js --generate orders --count 100
 
 # npm start //To the the script
-<<<<<<< HEAD
 
 
 ```
 
-=======
-
-
-```
->>>>>>> 145f55f40f0e9763dd7e8866a889c5408cdf5fe3
