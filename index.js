@@ -40,7 +40,7 @@ switch (generate) {
     case 'customers':
         Observable.fromPromise(shopifySystem.initializeCustomers())
             .mergeMap(resp => 
-                Observable.timer(0, 500)
+                Observable.timer(0, 1000)
                 .timeInterval()
             )
             .take(count)
@@ -56,7 +56,7 @@ switch (generate) {
     case 'products':
         Observable.fromPromise(shopifySystem.initializeProducts())
             .mergeMap(resp => 
-                Observable.timer(0, 500)
+                Observable.timer(0, 1000)
                 .timeInterval()
             )
             .take(count)
@@ -71,7 +71,7 @@ switch (generate) {
     case 'order':
     case 'orders':
     default:
-        Observable.timer(0, 500)
+        Observable.timer(0, 3000)
             .timeInterval()
             .take(count)
             .mergeMap(resp => shopifySystem.postOrder())

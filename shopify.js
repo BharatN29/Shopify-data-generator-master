@@ -94,7 +94,10 @@ export default class ShopifySystem {
                 }
             )
         })
-        return customerResponse
+
+        let resp = await customerResponse.text()
+        console.log(resp)
+        return JSON.parse(resp)
 
     }
 
@@ -201,9 +204,10 @@ export default class ShopifySystem {
                 }
             ) 
                 
-        }).then(resp => resp.json())
-
-        return orderResponse
+        })
+        let resp = await orderResponse.text()
+        console.log(resp)
+        return JSON.parse(resp)
     }
 
 
